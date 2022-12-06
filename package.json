@@ -37,6 +37,7 @@
     "react-fontawesome": "^1.7.1",
     "react-responsive-modal": "^3.6.0",
     "slate": "^0.84.0",
+    "slate-history": "^0.86.0",
     "slate-react": "^0.83.2",
     "styled-components": "^5.3.6"
   }

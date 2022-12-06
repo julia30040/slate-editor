@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import styled from "styled-components";
 import { createEditor } from "slate";
+import { withHistory } from "slate-history";
 import { Slate, Editable, withReact } from "slate-react";
 import { Toolbar } from "./Toolbar";
 import { ZINDEX, typography, color, opacity } from "../../styles/theme";
@@ -530,7 +531,9 @@ const dialogInitialState = {
 };
 
 export const SlateEditor = () => {
-  const [editor] = useState(() => withInlines(withReact(createEditor())));
+  const [editor] = useState(() =>
+    withInlines(withReact(withHistory(createEditor())))
+  );
   // const [modalInfo, setModalInfo] = useState({
   //   // 目前打開的 dialog 的名字
   //   currentOpenDialog: null,
